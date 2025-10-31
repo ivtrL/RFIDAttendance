@@ -18,20 +18,20 @@ MFRC522 mfrc522(SS_PIN, RST_PIN);
 
 AuthClient authClient(&client, &mfrc522);
 
-const char *ssid = "VIVOFIBRA-4BA8";
-const char *passwordWifi = "5E259B8056";
+const char *ssid = "WIFI-NAME";
+const char *passwordWifi = "WIFI-PASSWORD";
 
 // Login Server
-char httpLoginServer[] = "http://192.168.15.28:3000/api/device/login";
+char httpLoginServer[] = "API-DOMAIN-WEBSITE/api/device/login";
 
 AuthLoginResquest authLoginRequest;
 
 // Refresh Token Server
 char httpRefreshTokenServer[] =
-    "http://192.168.15.28:3000/api/auth/refresh-token/device";
+    "API-DOMAIN-WEBSITE/api/auth/refresh-token/device";
 
 // Check Card Server
-char httpCheckCardServer[] = "http://192.168.15.28:3000/api/card/check";
+char httpCheckCardServer[] = "API-DOMAIN-WEBSITE/api/card/check";
 
 typedef struct
 {
